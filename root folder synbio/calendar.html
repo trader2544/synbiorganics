@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .calendar div {
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .calendar div:hover {
+      background-color: #eaeaea;
+    }
+    .calendar .header {
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function redirectToConfirm(time) {
+      window.location.href = `confirm.html?time=${time}`;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Appointment Slot</h1>
+    <div class="calendar">
+      <div class="header">Time Slot</div>
+      <div onclick="redirectToConfirm('08:00 AM')">08:00 AM</div>
+      <div onclick="redirectToConfirm('09:00 AM')">09:00 AM</div>
+      <div onclick="redirectToConfirm('10:00 AM')">10:00 AM</div>
+      <div onclick="redirectToConfirm('11:00 AM')">11:00 AM</div>
+      <div onclick="redirectToConfirm('12:00 PM')">12:00 PM</div>
+      <div onclick="redirectToConfirm('01:00 PM')">01:00 PM</div>
+      <div onclick="redirectToConfirm('02:00 PM')">02:00 PM</div>
+      <div onclick="redirectToConfirm('03:00 PM')">03:00 PM</div>
+      <div onclick="redirectToConfirm('04:00 PM')">04:00 PM</div>
+      <div onclick="redirectToConfirm('05:00 PM')">05:00 PM</div>
+      <div onclick="redirectToConfirm('06:00 PM')">06:00 PM</div>
+    </div>
+  </div>
+</body>
+</html>

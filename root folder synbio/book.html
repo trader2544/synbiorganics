@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synbio Organics Appointment Booking</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Therapy Appointment</h1>
+        <form id="appointmentForm">
+            <div class="question">
+                <label for="symptoms">Have you been experiencing symptoms of recurrent H. pylori or yeast infections, such as persistent stomach pain, nausea, or digestive issues?</label>
+                <textarea id="symptoms" name="symptoms" required></textarea>
+            </div>
+            <div class="question">
+                <label for="duration">How long have you been dealing with these symptoms, and have you tried any treatments in the past that didn't work?</label>
+                <textarea id="duration" name="duration" required></textarea>
+            </div>
+            <div class="question">
+                <label for="awareness">Are you aware of the benefits of using synbiotics (probiotics and prebiotics) for treating digestive issues and infections like H. pylori and yeast infections?</label>
+                <textarea id="awareness" name="awareness" required></textarea>
+            </div>
+            <div class="question">
+                <label for="interest">Would you be interested in a personalized treatment plan that incorporates natural and effective remedies to address your recurrent infections and improve your overall gut health?</label>
+                <textarea id="interest" name="interest" required></textarea>
+            </div>
+            <div class="question">
+                <label for="schedule">Can we schedule a convenient time for you to visit Synbio Organics for a comprehensive consultation and start your journey towards better health?</label>
+                <textarea id="schedule" name="schedule" required></textarea>
+            </div>
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div id="confirmationMessage" class="hidden">
+            <p>Thank you for your interest in Synbio Organics. We will contact you soon to confirm your appointment.</p>
+        </div>
+    </div>
+    <script src="book.js"></script>
+</body>
+</html>
