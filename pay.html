@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Payment Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link href="pay.css"rel="stylesheet" type="text/css">
+<body>
+    <div class="payment-form-container">
+        <h1>Payment Form</h1>
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="card">Card Payment</option>
+                    <option value="mpesa">M-Pesa</option>
+                </select>
+            </div>
+            <div id="card-details" class="form-group" style="display: none;">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number">
+                <label for="card-expiry">Expiry Date</label>
+                <input type="text" id="card-expiry" name="card-expiry">
+                <label for="card-cvc">CVC</label>
+                <input type="text" id="card-cvc" name="card-cvc">
+            </div>
+            <div id="mpesa-details" class="form-group" style="display: none;">
+                <label for="mpesa-number">M-Pesa Number</label>
+                <input type="text" id="mpesa-number" name="mpesa-number">
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+        <span class="intasend-badge">
+            <a href="https://intasend.com/security" target="_blank">
+                <img src="https://intasend-prod-static.s3.amazonaws.com/img/trust-badges/intasend-trust-badge-no-mpesa-hr-dark.png" width="375px" alt="IntaSend Secure Payments (PCI-DSS Compliant)">
+            </a>
+            <strong>
+                <a class="intasend-link" href="https://intasend.com/security" target="_blank">
+                    Secured by IntaSend Payments
+                </a>
+            </strong>
+        </span>
+    </div>
+    <script src="pay.js"></script>
+</body>
+</html>

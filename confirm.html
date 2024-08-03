@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #5cb85c;
+    }
+    p {
+      margin: 20px 0;
+    }
+    .whatsapp-link {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .whatsapp-link:hover {
+      background-color: #1ebd53;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Appointment Confirmed</h1>
+    <p>Thank you, <span id="userName"></span>!</p>
+    <p>Your appointment is confirmed for <span id="appointmentDate"></span> at <span id="appointmentTime"></span>.</p>
+    <p>Please be in our office on the scheduled date and time.</p>
+    <a id="whatsappLink" class="whatsapp-link" href="#" target="_blank">Contact us on WhatsApp</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const appointmentTime = urlParams.get('time');
+      const appointmentDetails = JSON.parse(localStorage.getItem('appointmentDetails'));
+      
+      document.getElementById('userName').innerText = appointmentDetails.name;
+      document.getElementById('appointmentDate').innerText = appointmentDetails.date;
+      document.getElementById('appointmentTime').innerText = appointmentTime;
+
+      const whatsappBaseLink = "https://wa.me/message/WV5YKJ2BMXFFJ1?src=qr";
+      const whatsappLink = `${whatsappBaseLink}&text=Hello,%20I%20would%20like%20to%20confirm%20my%20appointment%20on%20${appointmentDetails.date}%20at%20${appointmentTime}`;
+      document.getElementById('whatsappLink').href = whatsappLink;
+    });
+  </script>
+</body>
+</html>

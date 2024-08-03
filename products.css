@@ -1,0 +1,183 @@
+.header {
+    background: #050505;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 1%;
+    top: 0;
+    z-index: 1000;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40;
+    background-image: url('images/dopamine.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(238, 241, 241);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(17, 17, 17, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding-bottom: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.cart-button {
+    background-color: #007bff;
+    color: white;
+    padding: 1px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: progress;
+    align-content: last baseline;
+}
+
+.cart-button:hover {
+    background-color: #0056b3;
+}
+ .h1container
+ {padding-left: 0%;
+    color: #4caf50
+;}
+
+h1 {
+    text-align: left;
+    color: #f0eaea;
+    margin: 10;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 100px;
+}
+
+.product img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-details {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #4caf50;
+}
+
+.product-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-button:hover {
+    background-color: #0056b3;
+}
+
+/* Base styles for all devices */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  
+  .header, .content, .footer {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 767px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .header, .content, .footer {
+      padding: 15px;
+      margin: 5px 0;
+    }
+  
+    .header h1, .content h2, .footer h3 {
+      font-size: 1.2em;
+    }
+  }
+  
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      width: 90%;
+    }
+  
+    .header, .content, .footer {
+      padding: 18px;
+      margin: 8px 0;
+    }
+  
+    .header h1, .content h2, .footer h3 {
+      font-size: 1.5em;
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    .container {
+      width: 80%;
+    }
+  
+    .header, .content, .footer {
+      padding: 25px;
+      margin: 15px 0;
+    }
+  
+    .header h1, .content h2, .footer h3 {
+      font-size: 2em;
+    }
+  }
+  
+
